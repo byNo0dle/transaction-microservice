@@ -1,2 +1,15 @@
 server:
   port: 9003
+
+#Configuration PostGreSQL
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/CodeChallengerDB
+    username: ${BD_USERNAME}
+    password: ${BD_PASSWORD}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
